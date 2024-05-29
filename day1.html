@@ -6,10 +6,27 @@
     </title>
 </head>
 <body>
-    <div id="app">
-        Hii, welcome to the day1 one of the javascript(Vue JS) !!</br>
+    <div id="app" v-cloak>
+        Hii, welcome to the day one of the javascript(Vue JS) !!</br>
         {{ 2+2 }}</br>
-        {{ firstName }}
+        {{ firstName }}</br>
+        {{ fullName() }}
+        {{fullNameComputed}}
+        <!-- <a v-bind:href="url" target="_blank">Google</a> -->
+        <a :href="url" target="_blank">Google</a> 
+        </br>
+        <hr>
+        <label>
+            First Name:
+        </label>
+        <input type="text" v-model = "firstName" >
+        <label>
+            Last Name:
+        </label>
+        <input type="text">
+        <button type="button" @click="increment">increment</button>
+        {{ age }}
+        <button type="button" @click="decrement">decrement</button>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src='app.js'></script>
@@ -18,7 +35,9 @@
 #app {
     display: flex;
     justify-content: center;
-    color: red;
+}
+[v-cloak]{
+    display: none;
 }
 </style>
 </html>
