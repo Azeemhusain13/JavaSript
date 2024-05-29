@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src='day1.js'></script>
+    <title>
+        Welcome to day1
+    </title>
 </head>
 <body>
-    <div class="name1">
-        Hii
+    <div id="app">
+        Hii, welcome to the day1 one of the javascript(Vue JS) !!</br>
+        {{ 2+2 }}</br>
+        {{ firstName }}
     </div>
-   
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src='app.js'></script>
 </body>
 <style>
-.name1 {
- color: red;
+#app {
+    display: flex;
+    justify-content: center;
+    color: red;
 }
 </style>
 </html>
